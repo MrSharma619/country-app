@@ -1,0 +1,50 @@
+.link_navbar1 {
+  all: unset;
+}
+
+.link_navbar1:hover {
+  cursor: pointer;
+}
+
+.ul_navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 3px 50px lightgray;
+}
+
+.title_li_navbar {
+  float: left;
+  margin: 10px 0 0 50px;
+}
+
+.dark_mode_btn {
+  display: block;
+  color: hsl(200, 15%, 8%);
+  padding: 14px 70px 14px 0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dark_mode {
+  float: right;
+}
+
+.title_navbar {
+  font-size: 24px;
+  font-weight: bold;
+  color: hsl(200, 15%, 8%);
+}
+
+.d-flex-navbar {
+  display: flex;
+}
+
+.img_dark_mode {
+  height: 20px;
+  width: 20px;
+  margin: 3px 8px 0 0;
+}

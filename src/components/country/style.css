@@ -1,0 +1,110 @@
+.link_to_home {
+  all: unset;
+}
+
+.link_to_home:hover {
+  cursor: pointer;
+}
+
+.div_back_btn {
+  height: 200px;
+  width: 100%;
+}
+
+.d-flex-back-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.img_left_arrow {
+  height: 20px;
+  width: 50px;
+  margin-top: 4px;
+}
+
+/* button css */
+
+.btn_back {
+  top: 50px;
+  left: 20px;
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 20px;
+  line-height: 29px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 170px;
+}
+
+.btn_border_country {
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  min-width: 100px;
+  margin-right: 20px;
+}
+
+.btn_back3:hover {
+  background-color: #f7fafa;
+}
+
+.btn_back:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.d-flex-cinfo {
+  display: flex;
+}
+
+.country_flag_png {
+  width: 450px;
+  height: 350px;
+}
+
+.detail_div {
+  margin: 10px 0 0 100px;
+  width: 50%;
+}
+
+.country_name {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.d-flex-detail_line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail_point {
+  font-weight: bold;
+  font-size: 16px;
+}

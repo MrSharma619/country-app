@@ -1,0 +1,45 @@
+.link_country {
+  all: unset;
+}
+
+.link_country:hover {
+  cursor: pointer;
+}
+
+/* cards */
+
+.country_card {
+  height: 450px;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.country_card:hover {
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.img_flag {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px 5px 0 0;
+}
+
+.container_country_desc {
+  padding: 2px 16px;
+}
+
+.b_country_name {
+  font-size: 24px;
+}
+
+.b_country_details {
+  font-size: 16px;
+}
+
+/* 4 columns in row */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 50px;
+}
