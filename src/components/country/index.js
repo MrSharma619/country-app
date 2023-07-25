@@ -87,8 +87,8 @@ function Country() {
                     alt="left-arrow"
                     src={
                       darkMode
-                        ? "http://localhost:3000/images/arrow-left-long-light.svg"
-                        : "http://localhost:3000/images/arrow-left-long-solid.svg"
+                        ? "images/arrow-left-long-light.svg"
+                        : "images/arrow-left-long-solid.svg"
                     }
                     className="img_left_arrow"
                   />

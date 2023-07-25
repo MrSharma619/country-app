@@ -36,9 +36,7 @@ function Navbar() {
                 className="img_dark_mode"
                 alt="moon"
                 src={
-                  darkMode
-                    ? "http://localhost:3000/images/moon-solid.svg"
-                    : "http://localhost:3000/images/moon-regular.svg"
+                  darkMode ? "images/moon-solid.svg" : "images/moon-regular.svg"
                 }
               />
             </div>
