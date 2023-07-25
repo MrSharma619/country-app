@@ -2,12 +2,15 @@ import { useEffect, useState } from "react";
 import "./style.css";
 import CountryCard from "../countrycard";
 import { staticData } from "../data";
+import { useSelector } from "react-redux";
 
 function Body() {
   const [country, setCountry] = useState([]);
   const [region, setRegion] = useState("Filter by Region");
   const [countryName, setCountryName] = useState("");
   const [searchString, setSearchString] = useState("");
+
+  const darkMode = useSelector((state) => state.mode.value);
 
   const handleFetch = () => {
     fetch("https://restcountries.com/v3.1/all")
@@ -93,21 +96,28 @@ function Body() {
   };
 
   return (
-    <div className="body_div">
+    <div className={darkMode ? "body_div_darkmode" : "body_div"}>
       <div className="d-flex-body-top">
         <div className="p-2 flex-fill">
-          <form onSubmit={handleSearch} className="example">
+          <form
+            onSubmit={handleSearch}
+            className={darkMode ? "example_darkmode" : "example"}
+          >
             <button type="submit">
               <img
                 className="img_search"
-                src="images/magnifying-glass-solid.svg"
+                src={
+                  darkMode
+                    ? "images/magnifying-glass-light.svg"
+                    : "images/magnifying-glass-solid.svg"
+                }
                 alt="search"
               />
             </button>
 
             <input
               type="text"
-              className="filter_input"
+              className={darkMode ? "filter_input_darkmode" : "filter_input"}
               placeholder="Search for a country..."
               onChange={handleChange}
               name="searchString"
@@ -116,19 +126,27 @@ function Body() {
           </form>
         </div>
         <div className="p-2 flex-fill dropdown_div">
-          <button className="dropbtn">
+          <button className={darkMode ? "dropbtn_darkmode" : "dropbtn"}>
             <div className="d-flex-dropbtn">
               <div className="p-2 flex-fill">{region}</div>
               <div className="p-2 flex-fill">
                 <img
                   alt="caret"
-                  src="images/angle-down-solid.svg"
+                  src={
+                    darkMode
+                      ? "images/angle-down-light.svg"
+                      : "images/angle-down-solid.svg"
+                  }
                   className="img_caret"
                 />
               </div>
             </div>
           </button>
-          <div className="dropdown-content">
+          <div
+            className={
+              darkMode ? "dropdown-content_darkmode" : "dropdown-content"
+            }
+          >
             <button onClick={() => handleFilter("Africa")}>Africa</button>
             <button onClick={() => handleFilter("America")}>America</button>
             <button onClick={() => handleFilter("Asia")}>Asia</button>

@@ -49,6 +49,16 @@
   width: 170px;
 }
 
+.btn_back:hover {
+  background-color: #f7fafa;
+}
+
+.btn_back:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
 .btn_border_country {
   background-color: #fff;
   border: 1px solid #d5d9d9;
@@ -68,16 +78,6 @@
   width: auto;
   min-width: 100px;
   margin-right: 20px;
-}
-
-.btn_back3:hover {
-  background-color: #f7fafa;
-}
-
-.btn_back:focus {
-  border-color: #008296;
-  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
-  outline: 0;
 }
 
 .d-flex-cinfo {
@@ -107,4 +107,60 @@
 .detail_point {
   font-weight: bold;
   font-size: 16px;
+}
+
+/* css for dark mode */
+
+.btn_back_darkmode {
+  top: 50px;
+  left: 20px;
+  background-color: hsl(209, 23%, 22%);
+  border: 1px solid #cfeded;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.879);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember", sans-serif;
+  font-size: 20px;
+  line-height: 29px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 170px;
+}
+
+.btn_back_darkmode:hover {
+  background-color: #243232;
+}
+
+.btn_border_country_darkmode {
+  background-color: hsl(209, 23%, 22%);
+  border: 1px solid #cfeded;
+  border-radius: 8px;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.879);
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  min-width: 100px;
+  margin-right: 20px;
+}
+
+.country_info_darkmode {
+  color: white;
 }

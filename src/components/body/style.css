@@ -2,7 +2,7 @@
   background-color: hsl(0, 0%, 98%);
   width: 96.5%;
   height: auto;
-  min-height: 630px;
+  min-height: 637px;
   margin-top: 3px;
   padding: 50px 0 0 50px;
   overflow: hidden;
@@ -102,4 +102,81 @@
 .img_caret {
   height: 20px;
   width: 20px;
+}
+
+/* css for dark mode */
+
+.body_div_darkmode {
+  background-color: hsl(207, 26%, 17%);
+  width: 96.5%;
+  height: auto;
+  min-height: 637px;
+  margin-top: 3px;
+  padding: 50px 0 0 50px;
+  overflow: hidden;
+}
+
+.filter_input_darkmode {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.879);
+  border: none;
+}
+
+.example_darkmode {
+  display: flex;
+  height: 51.2px;
+  width: 600px;
+}
+
+.example_darkmode button {
+  width: 20%;
+  padding: 10px;
+  font-size: 17px;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.879);
+  cursor: pointer;
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+}
+
+.dropbtn_darkmode {
+  width: 100%;
+  background-color: hsl(209, 23%, 22%);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 1px 5px rgba(255, 255, 255, 0.879);
+}
+
+.dropdown-content_darkmode {
+  display: none;
+  position: absolute;
+  background-color: hsl(209, 23%, 22%);
+  min-width: 200px;
+  box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.879);
+  z-index: 1;
+  margin-top: 2px;
+}
+
+.dropdown-content_darkmode button {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  background-color: hsl(209, 23%, 22%);
+  font-size: 16px;
+}
+
+.dropdown-content_darkmode button:hover {
+  background-color: #141313;
+}
+
+.dropdown_div:hover .dropdown-content_darkmode {
+  display: block;
 }

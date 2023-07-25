@@ -1,10 +1,13 @@
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import "./style.css";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 function Country() {
   const [countryDetails, setCountryDetails] = useState(null);
   const [borderCountries, setBorderCountries] = useState([]);
+
+  const darkMode = useSelector((state) => state.mode.value);
 
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
@@ -74,15 +77,19 @@ function Country() {
 
   return (
     <>
-      <div className="body_div">
+      <div className={darkMode ? "body_div_darkmode" : "body_div"}>
         <div className="div_back_btn">
           <Link className="link_to_home" to="/">
-            <button className="btn_back">
+            <button className={darkMode ? "btn_back_darkmode" : "btn_back"}>
               <div className="d-flex-back-btn">
                 <div className="p-2 flex-fill">
                   <img
                     alt="left-arrow"
-                    src="http://localhost:3000/images/arrow-left-long-solid.svg"
+                    src={
+                      darkMode
+                        ? "http://localhost:3000/images/arrow-left-long-light.svg"
+                        : "http://localhost:3000/images/arrow-left-long-solid.svg"
+                    }
                     className="img_left_arrow"
                   />
                 </div>
@@ -92,7 +99,7 @@ function Country() {
           </Link>
         </div>
         {countryDetails && (
-          <div className="country_info">
+          <div className={darkMode ? "country_info_darkmode" : "country_info"}>
             <div className="d-flex-cinfo">
               <div className="p-2 flex-fill">
                 <img
@@ -169,15 +176,24 @@ function Country() {
 
                 <div>
                   <span className="detail_point">Border Countries: </span>
-                  {borderCountries.map((x) => (
+                  {borderCountries.map((x, i) => (
                     <Link
+                      key={i}
                       className="link_to_home"
                       to={{
                         pathname: "/detail",
                         search: `?country=${x.name}`,
                       }}
                     >
-                      <button className="btn_border_country">{x.name}</button>
+                      <button
+                        className={
+                          darkMode
+                            ? "btn_border_country_darkmode"
+                            : "btn_border_country"
+                        }
+                      >
+                        {x.name}
+                      </button>
                     </Link>
                   ))}
                 </div>

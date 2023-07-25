@@ -1,28 +1,52 @@
 import { Link } from "react-router-dom";
 import "./style.css";
+import { useDispatch, useSelector } from "react-redux";
+import { changeMode } from "../../slices/modeSlice";
 
 function Navbar() {
+  //console.log(props);
+
+  const darkMode = useSelector((state) => state.mode.value);
+  const dispatch = useDispatch();
+
+  const switchMode = (e) => {
+    e.preventDefault();
+
+    dispatch(changeMode());
+  };
+
   return (
-    <ul className="ul_navbar">
+    <ul className={darkMode ? "ul_navbar_dark" : "ul_navbar"}>
       <Link to="/" className="link_navbar1">
         <li className="title_li_navbar">
-          <span className="title_navbar">Where in the world?</span>
+          <span className={darkMode ? "title_navbar_darkmode" : "title_navbar"}>
+            Where in the world?
+          </span>
         </li>
       </Link>
 
       <li className="dark_mode">
-        <a className="dark_mode_btn" href="#abc">
+        <button
+          className={darkMode ? "dark_mode_btn_darkmode" : "dark_mode_btn"}
+          onClick={switchMode}
+        >
           <div className="d-flex-navbar">
             <div className="p-2 flex-fill">
               <img
                 className="img_dark_mode"
                 alt="moon"
-                src="http://localhost:3000/images/moon-regular.svg"
+                src={
+                  darkMode
+                    ? "http://localhost:3000/images/moon-solid.svg"
+                    : "http://localhost:3000/images/moon-regular.svg"
+                }
               />
             </div>
-            <div className="p-2 flex-fill">Dark Mode</div>
+            <div className="p-2 flex-fill">
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </div>
           </div>
-        </a>
+        </button>
       </li>
     </ul>
   );

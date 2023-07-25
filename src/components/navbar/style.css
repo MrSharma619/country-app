@@ -21,12 +21,15 @@
 }
 
 .dark_mode_btn {
-  display: block;
+  all: unset;
   color: hsl(200, 15%, 8%);
   padding: 14px 70px 14px 0;
-  text-decoration: none;
   font-size: 16px;
   font-weight: bold;
+}
+
+.dark_mode_btn:hover {
+  cursor: pointer;
 }
 
 .dark_mode {
@@ -47,4 +50,33 @@
   height: 20px;
   width: 20px;
   margin: 3px 8px 0 0;
+}
+
+/* css for dark mode */
+
+.ul_navbar_dark {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0 3px 50px #787878;
+}
+
+.dark_mode_btn_darkmode {
+  all: unset;
+  color: white;
+  padding: 14px 70px 14px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dark_mode_btn_darkmode:hover {
+  cursor: pointer;
+}
+
+.title_navbar_darkmode {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
 }

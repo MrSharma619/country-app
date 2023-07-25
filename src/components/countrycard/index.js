@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import "./style.css";
+import { useSelector } from "react-redux";
 
 function CountryCard(props) {
   //console.log(props.data);
+
+  const darkMode = useSelector((state) => state.mode.value);
 
   const c = props.data;
 
@@ -16,7 +19,7 @@ function CountryCard(props) {
   return (
     <div className="column">
       <Link className="link_country" to={location}>
-        <div className="country_card">
+        <div className={darkMode ? "country_card_darkmode" : "country_card"}>
           <img src={c.flags.png} alt={c.flags.alt} className="img_flag" />
           <div className="container_country_desc">
             <h4>
